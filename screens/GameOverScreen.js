@@ -1,13 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import StartGameScreen from './screens/StartGameScreen'
 
-const App = () => {
+const GameOverScreen = () => {
   return (
-   <StartGameScreen/>
+    <View>
+      <Text>GameOverScreen</Text>
+    </View>
   )
 }
 
-export default App
+export default GameOverScreen
 
 const styles = StyleSheet.create({})

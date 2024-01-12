@@ -1,13 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import StartGameScreen from './screens/StartGameScreen'
 
-const App = () => {
+const PrimaryButton = ({children}) => {
   return (
-   <StartGameScreen/>
+    <View>
+      <Text>{children}</Text>
+    </View>
   )
 }
 
-export default App
+export default PrimaryButton
 
 const styles = StyleSheet.create({})
