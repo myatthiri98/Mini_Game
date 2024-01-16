@@ -1,4 +1,4 @@
-import {Alert, StyleSheet, Text, TextInput, View} from 'react-native';
+import {Alert, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, View} from 'react-native';
 import React, {useState} from 'react';
 import PrimaryButton from '../components/ui/PrimaryButton';
 import Colors from '../constants/colors';
@@ -32,6 +32,8 @@ const StartGameScreen = ({onPickNumber}) => {
   };
 
   return (
+    <ScrollView style={styles.screen}>
+    <KeyboardAvoidingView style={styles.screen} behavior='position'>
     <View  style={styles.rootContainer}>
       <Title>Guess My Number</Title>
     <Card>
@@ -55,12 +57,17 @@ const StartGameScreen = ({onPickNumber}) => {
       </View>
       </Card>
     </View>
+    </KeyboardAvoidingView>
+    </ScrollView>
   );
 };
 
 export default StartGameScreen;
 
 const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+  },
   rootContainer:{
     flex:1,
     marginTop: 100,
